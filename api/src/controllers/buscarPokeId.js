@@ -3,11 +3,12 @@ const { BASE_URL } = process.env;
 const axios = require("axios");
 const api = axios.default;
 const { Pokemon, Types } = require("../db.js");
+let pokemons = [];
 
 async function buscarPokeId(req, res, next) {
   const { id } = req.params;
 
-  if (!id) return res.sendStatus(400);
+  if (!id) return res.sendStatus(404);
   // Regular expression para verificar la UUID
   const checkid =
     /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/gi;
@@ -86,7 +87,7 @@ async function buscarPokeId(req, res, next) {
       res.status(200).json(pokemon);
     }
   } catch (error) {
-    next({ message: "Lo lamento, Pokemon No encontrado", status: 400 });
+    next({ message: "Lo lamento, Pokemon No encontrado", status: 404 });
   }
 }
 

@@ -1,15 +1,15 @@
 const getPkRouter = require("./obtenerPokemons");
-const searchPkId = require("./buscarPokeId");
-const getPkmTypes = require("./obtenerTiposPokemons");
-const getLocalPkm = require("./obtenerLocalPokemons");
-const createPkm = require("./crearPokemon");
-const createType = require("./crearTipo");
+const searchPkIdRouter = require("./buscarPokeId");
+const getPkmTypesRouter = require("./obtenerTiposPokemons");
+const getLocalPkmRouter = require("./obtenerLocalPokemons");
+const createPkmRouter = require("./crearPokemon");
+const createTypeRouter = require("./crearTipo");
 
 module.exports = {
   getPkRouter,
-  searchPkId,
-  getPkmTypes,
-  getLocalPkm,
-  createPkm,
-  createType,
+  searchPkIdRouter,
+  getPkmTypesRouter,
+  getLocalPkmRouter,
+  createPkmRouter,
+  createTypeRouter,
 };
