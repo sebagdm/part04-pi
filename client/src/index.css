@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,155 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+:root{
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --offset-width: 0px;
+  --offset-color: #fff;
+  --color: rgba(59, 130, 246, 0.5);
+  --offset-shadow: 0 0 #0000;
+  --ring-shadow: 0 0 #0000;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --scrollbarBG: #cfd8dc00;
+  --thumbBG: #d8d8d8;
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+select{
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+.consola{
+  font-family: 'Space Mono', monospace;
+}
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+.hidden{
+  display: none;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+.spinning{
+  animation: spin 1s linear infinite;
+
+}
+.shadow-medium{
+  box-shadow: var(--offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
+}
+.shadow-small{
+  
+  box-shadow: var(--offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow-sm);
+}
+.custom-scrollbar::-webkit-scrollbar{
+  width: 6px;
+}
+.custom-scrollbar{
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+.filter_group{
+  margin: 0 20px;
+  display: flex;
+}
+.filter_group > input{
+  margin: 0 5px;
+}
+.filter_group > label {
+  align-self: center;
+}
+.selectdiv {
+  margin-left: 10px;
+  min-width: 210px;
+  position: relative;
+  align-self: center;
+}
+.selectdiv:after {
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: white;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+  
+  top: 3px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+  
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 0px 26px 0 10px;
+  font-size: 16px;
+  line-height: 1.75;
+  background-image: none;
+  border: 2px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+.selectdiv select:focus{
+  border: 2px solid #D97706;
+}
+select option{
+  background-color: #080b14;
+  color:#F9FAFB;
 }
