@@ -22,7 +22,7 @@ describe("Types model", () => {
           })
           .catch(() => done());
       });
-      it("Should NOT create a type without id: ", (done) => {
+      it("NO debe crear un tipo sin identificación: ", (done) => {
         Types.create({
           en: "Should not create this",
         })
