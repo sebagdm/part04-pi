@@ -75,7 +75,7 @@ async function preload() {
 preload();
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(async () => {
+conn.sync({ force: false }).then(async () => {
   await server.listen(PORT, () => {
     console.log("listening in port:" + PORT); // eslint-disable-line no-console
   });

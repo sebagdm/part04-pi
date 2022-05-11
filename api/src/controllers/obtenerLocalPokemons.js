@@ -1,8 +1,5 @@
 require("dotenv").config();
-// const { BASE_URL, BASE_URL_LIMIT, BASE_URL_TYPE } = process.env;
-// const axios = require("axios");
 
-// const api = axios.default;
 const { Pokemon, Types } = require("../db.js");
 
 async function obtenerLocalPokemons(req, res) {
